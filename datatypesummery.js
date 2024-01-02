@@ -46,8 +46,8 @@ let a=[30,80,'bc']
   
   let second=first
   second.score=60
-  console.log(first);//{ score: 60, grade: 'A' }
-  console.log(second);//{ score: 60, grade: 'A' }
+//   console.log(first);//{ score: 60, grade: 'A' }
+//   console.log(second);//{ score: 60, grade: 'A' }
 
 
 
@@ -55,4 +55,23 @@ let a=[30,80,'bc']
 
   
 //-----------------------------------------------------------------------------------------------------------------------------------
-  let 
+  let  name="sakshi"
+  let repocount=70
+  console.log(`hello my name is ${name} and repocount is ${repocount}`);
+
+   const gamecount=new String("sakshi")
+   console.log(gamecount[4]);
+   console.log(gamecount.charAt(3));
+   console.log(gamecount.indexOf("s"));
+
+
+const newstring=gamecount.slice(-3,3)
+console.log(newstring);
+
+
+const newstringone="    hello   world".trim()
+console.log(newstringone);
+
+const url="hsfjnfjkhgdfjknsg@207859"
+
+console.log(url.split("j"));
