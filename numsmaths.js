@@ -12,8 +12,8 @@ const hundreads=100000000
 
 //-------------------------------------------maths--------------------------------------------------------------------------------------
 
-   console.log(Math);
-   console.log(Math.abs(-3));
+   console.log(Math);//BY DEFAULTJS LIBRARY
+   console.log(Math.abs(-3));//3 only negative values turns into positive
    console.log(Math.floor(4.9));//4
    console.log(Math.round(4.5));//5
    console.log(Math.ceil(3.2));//4
