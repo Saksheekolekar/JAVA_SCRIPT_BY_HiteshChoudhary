@@ -57,5 +57,6 @@ instructor:"abc sir"
 
 //const {courcename}=course 
 //console.log(courcename); //js course
+
 const {instructor:i}=course
 console.log(i); //abc sir

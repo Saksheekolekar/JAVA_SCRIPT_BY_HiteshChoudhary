@@ -1,4 +1,5 @@
 //constructor throught singlton
+// const a=new Object()
 
 //non singleton
 //object literols
