@@ -56,18 +56,18 @@ const myobject = {
     username: "sakshi", age: 30
 }
 
-function handleobject(getobject){
+function handleobject(getobject) {
     console.log(`username is ${getobject.username} and age is ${getobject.age}`);
 
 }
 handleobject(myobject)//username is sakshi and age is 30
-handleobject({ username:"ram",age:80})//username is ram and age is 80
+handleobject({ username: "ram", age: 80 })//username is ram and age is 80
 
 //lets handle array in function
-const definedarray=[8,3,91,3]
+const definedarray = [8, 3, 91, 3]
 
-function secondval(getarray){
+function secondval(getarray) {
     return getarray[1]
 }
 console.log(secondval(definedarray));//3
-console.log(secondval([79,50,23,8]));//50
+console.log(secondval([79, 50, 23]));//3
