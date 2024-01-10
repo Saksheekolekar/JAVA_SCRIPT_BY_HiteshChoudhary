@@ -9,9 +9,9 @@ function saymyname() {
 saymyname //reference //
 saymyname() //execution // sakshi
 
-// function addtwono(num1,num2 /*parameters*/){ 
-//     console.log(num1+num2);
-// }
+function addtwono(num1,num2 /*parameters*/){ 
+    console.log(num1+num2);
+}
 // addtwono(3,null/*argument*/) //3
 // const result=addtwono(3,2) //5
 // console.log("Result:",result); //undefined because function doesn't returns any thing
@@ -46,6 +46,7 @@ console.log(loginusername("sakshi"));//sakshi is just logged in
 // console.log(calcultecartprice(30, 40, 9, 70)); //[ 30, 40, 9, 70 ]
 
 function calcultecartprice(val1, val2, ...num1) { //here ...  30 is stored in val1 ,40 stored in val2 and remains went into ...num1
+    //console.log(typeof num1);
     return num1
 }
 console.log(calcultecartprice(30, 40, 9, 70)); //[  9, 70 ]
