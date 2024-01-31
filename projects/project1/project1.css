@@ -1,0 +1,14 @@
+.heading
+{
+text-align: center;
+color: rgb(10, 116, 114);
+}
+
+.button
+{
+    margin: 20pc;
+    border-color: blue;
+    color: rgb(241, 236, 241);
+   max-width: 599%;
+    background-color: rgb(10, 10, 10);
+}
