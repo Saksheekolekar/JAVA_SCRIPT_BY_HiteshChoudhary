@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sakshi kolekar || dom </title>
+</head>
+<body style="background-color:black; color: fuchsia;">
+<ul class="language">
+    <li>JavaScript</li>
+</ul>
+</body>
+<script>
+  function language(langName)//while using this funcction it needs to traverse the whole dom tree hence its not that much efficient
+  {
+    const li=document.createElement('li')
+    li.innerHTML=`${langName}`
+    document.querySelector('.language').appendChild(li)
+  }
+  language("python")
+
+  function optilang(langName)//this is optimised way because it directly add values
+  {
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+
+  }
+  optilang("ruby")
+
+  //edit=========================================================================
+
+   /*1 REplace existing tag with another*/
+   const secondlang=document. querySelector("li:nth-child(2)")
+  // secondlang.innerHTML="java"//itsnot memory efficient
+  const newli=document.createElement('li')
+  newli.textContent="c++"
+  secondlang.replaceWith(newli)//its efficient way direct replace with another value
+  
+   /*2 REplace by using html code*/
+   const firstLang=document.querySelector("li:first-child")
+  console.log(firstLang);//<li>::marker "JavaScript"</li>
+  firstLang.outerHTML="<li>html</li>"
+
+//Remove======================================================================================
+ const lastli=document.querySelector("li:nth-child(3)")
+lastli.remove()
+</script>
+</html>
