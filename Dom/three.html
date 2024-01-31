@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sakshi kolekar</title>
+</head>
+<body style="background-color: black; color: chartreuse;">
+    
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div);
+    div.className='main'
+    div.id="myid"
+    div.innerText="good morning"
+    div.setAttribute("title","generate title")
+    div.style.backgroundColor="red"
+    div.style.padding="190px"//in this method firtsly goes to the element then take its content here and override it
+
+    // const addText=document.createTextNode("Good afternoon") 
+    // div.appendChild(addText)//here it directly writes  over the content
+
+    document.body.appendChild(div)
+
+</script>
+</html>
