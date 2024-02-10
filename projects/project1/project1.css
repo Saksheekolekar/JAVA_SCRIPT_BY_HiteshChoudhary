@@ -1,14 +1,21 @@
 .heading
 {
-text-align: center;
-color: rgb(10, 116, 114);
+color: rgb(16, 16, 16);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .button
 {
-    margin: 20pc;
-    border-color: blue;
-    color: rgb(241, 236, 241);
-   max-width: 599%;
-    background-color: rgb(10, 10, 10);
+    color:rgb(247, 244, 244);
+    background-color:black;
+    padding: 4px 10px;
+    font: bold 15px/1 "Open Sans", sans-serif;
+    display: inline-block;
+    margin: 10px 20px;
+    border: 5px solid #c830f3;
+   animation: ;
+}
+body{
+   text-align: center;
+   height: 50%;
 }
