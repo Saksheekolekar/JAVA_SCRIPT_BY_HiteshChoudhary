@@ -3,7 +3,8 @@
 1.CREATING THE BUTTON  WITH COLOUR NAME ,ONCLICKING ON THEM IT WILL CHANGE THE BACKGROUND COLOR OF SCREEN
 
 #SOLUTION CODE:
-```javascript
+```javascript 
+
 
 const button=document.querySelectorAll('.button')
 const body=document.querySelector('body')
@@ -56,5 +57,16 @@ Form.addEventListener('submit',(e)=>{
    }
 
 })
+```
+3.LOCAL TIME CHANGING CLOCK PER SECONDS.
+
+```javascript
+
+const span=document.querySelector('span')
+
+setInterval(()=>{
+    let date=new Date();
+    span.innerHTML=date.toLocaleString();
+},1000)
 ```
 

@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+
+span{
+    color:rgb(247, 26, 26);
+   font-size :30px ;
+   border-width:100px;
+   margin-top: 600px;
+   margin-left:360px ;
+}
