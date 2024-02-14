@@ -70,3 +70,10 @@ setInterval(()=>{
 },1000)
 ```
 
+4.GAME:GUESS THE RANDOM NUMBER
+
+```javascript
+
+
+```
+

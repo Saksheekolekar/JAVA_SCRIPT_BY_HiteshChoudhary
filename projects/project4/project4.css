@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+  }
+  html {
+    display: table;
+    margin: auto;
+  }
+  body {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color:darkslategrey;
+  }
+  h1{
+    background-color: #744f74;
+    animation: head;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+  }
+   @keyframes head{
+    20%{
+        background-color: rgb(235, 100, 43);
+    }
+    40%{
+        background-color:rgb(183, 241, 68) ;
+    }
+    60%{
+        background-color:rgb(68, 241, 215) ;
+    }
+    80%{
+        background-color:rgb(68, 111, 241) ;
+    }
+    100%{
+        background-color:rgb(241, 68, 180) ;
+    }
+  }
+  button{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 10px;
+    width:fit-content;
+    height: 30px;
+    margin: 20px;
+  }
+  table{
+    margin-right: auto;
+    margin-left: auto;
+    color: rgb(184, 215, 178);
+  }
+  td,th{
+    width: 60px;
+    height: 40px;
+  }
+  .chances
+  {
+    color: rgb(23, 22, 22); 
+    font-weight: bold;
+     background-color: rgb(250, 134, 134);
+     margin-left: auto;
+     margin-right: auto;
+     width: 200px;
+     height: 25px;
+     text-align: center;
+     border-radius: 20px;
+     border: 2px solid black;
+  }
+  textarea
+  {
+    text-align: center;
+  width: 500px;
+   resize: none;
+    
+  }
