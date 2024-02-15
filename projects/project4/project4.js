@@ -18,13 +18,20 @@ button.addEventListener("click", function (e) {
         }
         else {
             if (guess === ran) {
-                alert("Congratulation you got it right");
+                document.querySelector(".hint").innerHTML="Congratulation you got it right";
                 tr[count].innerHTML="won"
-                alert("start again");
+                alert("CONGRATULATION YOU WON!!\n     start again");
                 location.reload();
             }
             else {
-                alert("try again, your turn " +( count+1) + " out of 10");
+                if(guess>ran)
+                {
+                    document.querySelector(".hint").innerHTML="Number is Less Than Ur Guess"
+                }
+                if(guess<ran)
+                {
+                    document.querySelector(".hint").innerHTML="Number is Greater Than ur Guess"
+                }
                 tr[count].innerHTML=guess
                 count++;
                 textfield.value="";
