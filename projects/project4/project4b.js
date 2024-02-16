@@ -17,6 +17,7 @@ if (playGame) {
         e.preventDefault();
         let guess = parseInt(userinput.value);
         validateGuess(guess);
+        console.log(numguess);
     })
 }
 
@@ -28,16 +29,17 @@ function validateGuess(guess) {
     }
     else if (guess < 1) {
         alert("please,Enter a Number greater than 1")
-    }else{
-        if (numguess<10){
-            displayGuesses(guess);
-            checkGuess(guess)
-        } else {
+    } else {
+        if (numguess==9) {
             displayGuesses(guess)
             displayMessage(`GAME WAS OVER ,RANDOM NUMBER WAS ${rand}`)
             endGame();
+        } else {
+            displayGuesses(guess);
+            checkGuess(guess)
         }
     }
+
 }
 
 function checkGuess(guess) {
@@ -60,7 +62,7 @@ function displayGuesses(guess) {
     guessSlot[numguess].innerHTML += `${prevguess[numguess]}`
     numguess++
     Remaining.innerHTML = `${10 - numguess}`
-    console.log(numguess);
+
 }
 
 function displayMessage(message) {
@@ -73,6 +75,7 @@ function endGame() {
     p.classList.add('button')
     p.innerHTML = `<h2 id="newGame">Start New Game</h2>`
     Remaining.append(p)
+    // console.log(Remaining.childNodes);
     playGame = false
     newGame()
 }
@@ -81,13 +84,13 @@ function newGame() {
     const newgame = document.querySelector('#newGame')
     newgame.addEventListener('click', function (e) {
         rand = parseInt(Math.random() * 100 + 1);
-        console.log("NEW",rand);
+        console.log("NEW", rand);
         prevguess = []
-        for (let i = 0; i <= 9; i++) {
+        for (let i = 0; i <= 9; i++)
+         {
             guessSlot[i].innerHTML = ''
-        }
-        hint.innerHTML=""
-        numguess = 0
+        } numguess = 0
+        hint.innerHTML = ""
         userinput.removeAttribute('disabled')
         Remaining.removeChild(p)
         Remaining.innerHTML = `${10 - numguess}`

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events </title>
+    <style>
+        li {
+            margin: 5pc;
+            border: 1px solid black;
+            width: 40px;
+            height: 40px;
+        }
+
+        /* li ::marker
+        {
+        } */
+    </style>
+</head>
+
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img src="" width="200px" id="a" alt="a">
+
+            </li>
+            <li><img src="" width="200px" id="b" alt="b" "> <!--onclick=" alert('this is b!!') //this is not feasible
+                    approach in js this cause problem during scalabality-->
+
+            </li>
+            <li><img src="" width="200px" id="c" alt="c">
+
+            </li>
+            <li><img src="" width="200px" id="d" alt="d">
+
+            </li>
+            <li><img src="" width="200px" id="e" alt="e">
+
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=0HO4KaRF5KI&list=PPSV" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //js is sequentially run language because event runs seq.ly
+    // document.querySelector("#b").onclick=function()//it gives less feature so use event listener this gives propagation ability
+    // {
+    //     alert("this b!!")
+    // }
+    //-----------------event object-----------
+    //type,timestamp,defaultprevented
+    //target,toElement,srcElement,currentTarget
+    //clientX,clientY,screenX,screenY
+    //altKey,shiftKey,ctrlKey,keycode
+
+    /* 
+  document.querySelector("#images").addEventListener("click",function (e) {//this is best approach of handling event
+      console.log("clicked inside ul")
+    
+  },false)//depends on parent node where to go
+
+      document.querySelector("#b").addEventListener("click",function (e) {//this is best approach of handling event
+      console.log("you clicked b!!")
+    e.stopPropagation()//it does not  goes up the tree it just stops here and do nothing
+  },false)
+
+  document.getElementById("google").addEventListener("click", function (e){
+      e.preventDefault();//it prevents default action of click which is opening link in new tab or page
+      console.log("You Clicked Google");
+      e.stopPropagation();
+  })
+*/
+    // attachEvent -this was used early when the internet explorer has some demand
+    //jQuery -ON EVENT LISTENER .on
+    //--------------------------------------------------------------EVENT PROPAGATION------------------------
+    //it has two approaches
+    //1)event bubbling,capture phase(parent to child) by default third  param false 
+    //2)event capturing,bubble phase(child to parent)true  
+
+
+    // ===================================================================================================================================
+
+    //remove each image when we click on it
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        let removeIt = e.target.parentNode//it gives  us <li>node 
+        if (removeIt.tagName === 'LI') {
+            //   if(removeIt.nodeName==='LI'){}///////nodename works as whole dom where space consider as text
+            console.log(removeIt);
+            //   removeIt.remove()//this method  will remove only that element from dom but data remains there so memory leak happens
+            removeIt.parentNode.removeChild(removeIt)//by using  this method we can easily delete any element from DOM 
+        }
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Press any key or click the mouse to get the event type.</p>
+<p id="log"></p>
+
+</body>
+<script>
+    function getEventType(event) {
+  const log = document.getElementById("log");
+  log.innerText = `${event.type}\n${log.innerText}`;//type returns the type event happen
+  console.log(typeof(event.type));// returns string
+
+// Keyboard events
+document.addEventListener("keydown", getEventType, false); // first
+document.addEventListener("keypress", getEventType, false); // second
+document.addEventListener("keyup", getEventType, false); // third
+
+// Mouse events
+document.addEventListener("mousedown", getEventType, false); // first
+document.addEventListener("mouseup", getEventType, false); // second
+document.addEventListener("click", getEventType, false); // third
+
+</script>
+</html>
