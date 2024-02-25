@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressed key info</title>
+    <style>
+        body{
+            justify-content: center;
+            align-self: center;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        
+    </div>
+</body>
+<script>
+window.addEventListener('keyup',(e)=>{
+    document.querySelector('div').innerHTML=`
+    <table border=1>
+        <tr>
+            <th>key<th>keyCode<th>code
+        </tr>
+        <tr>
+            <td>${e.key==" "?"space":e.key}<td>${e.keyCode}<td>${e.code}
+        </tr>
+    </table>`
+})
+</script>
+</html>

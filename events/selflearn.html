@@ -15,7 +15,7 @@
   const log = document.getElementById("log");
   log.innerText = `${event.type}\n${log.innerText}`;//type returns the type event happen
   console.log(typeof(event.type));// returns string
-
+    }
 // Keyboard events
 document.addEventListener("keydown", getEventType, false); // first
 document.addEventListener("keypress", getEventType, false); // second

@@ -15,9 +15,11 @@ const jsUser={
     lastloggindays:["mon","thus"]
 }
 
+console.log(jsUser["em ail"]);
+console.log(jsUser[mysym]);
 //we can print object element by following methods
 //console.log(jsUser.em ail); //here not requered
-// console.log(jsUser.["em ail"]); //must need to speify quote i.e. "email"  
+// console.log(jsUser.["em ail"]); //must need to speify quote i.e. "email"  not requred dot
 // console.log(jsUser.[mysym]);//symbols  and key with spacing name must need this type to access
 
 //change value (overide)

@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>stop and start button</title>
     <style>
+        body {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            /* min-height: 100vh;  */
+        }
 
-    body{
-        display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    /* min-height: 100vh;  */
-    }
-   button{
-    margin: 20px;
-   }
+        button {
+            margin: 50px;
+            padding: 50px;
+            padding-right: 70px;
+            padding-left: 70px;
+            border-radius: 45px;
+            border: 4px solid black;
+            background-color: rgba(118, 222, 241, 0.4);
+            color: rgb(54, 5, 63);
+        }
     </style>
 </head>
+
 <body>
-    <button class="start">Start </button> 
-    <button class="stop">stop </button> 
+    <button class="start">Start </button>
+    <button class="stop">stop </button>
 </body>
 <script>
     //start stop button
-     let show;
-     const body=document.querySelector("body")
-    const start=document.querySelector(".start")
-    const stop=document.querySelector(".stop")
+    let show;
+    const body = document.querySelector("body")
+    const start = document.querySelector(".start")
+    const stop = document.querySelector(".stop")
 
-    let red, green, blue,color,generate;
+    let red, green, blue, color, generate;//this will help you generate random colour
 
-    start.addEventListener('click',()=>{
-        generate=setInterval(()=>{
-            red=Math.floor(Math.random()*256);
-            green=Math.floor(Math.random()*256);
-            blue=Math.floor(Math.random()*256);
-            color=`rgb(${red},${green},${blue})`;
-            document.body.style.backgroundColor=color;
-        },1000)
+    start.addEventListener('click', () => {
+        if (generate == null) {//it it will null then it will start  generating the colour else it will keep on going
+            generate = setInterval(() => {
+                red = Math.floor(Math.random() * 256);
+                green = Math.floor(Math.random() * 256);
+                blue = Math.floor(Math.random() * 256);
+                color = `rgb(${red},${green},${blue})`;
+                document.body.style.backgroundColor = color;
+                console.log(color);
+            }, 1000)
+        }
     })
 
-    stop.addEventListener('click',()=>{
+    stop.addEventListener('click', () => {
         clearInterval(generate);
+        generate = null;//after stoping set  interval to null so that it wont keep running in
     })
 
 
-    
+
     /*start.addEventListener("click",()=>{
        show=setInterval(()=>{
         console.log("sakshi "+Date.now()  );
@@ -55,7 +68,14 @@
     stop.addEventListener('click',()=>{
         clearInterval(show)
     }) */
-   
 
+  /*  let ran d="0123456789ABCDEF"         generating random color using hexadecimal
+    let color="#"
+    for( let i=0;i<6;i++){
+        color+=rand[Math.floor(Math.random()*16)];
+    }
+    console.log(color); */
+    // document.querySelector("body").style.backgroundColor=color;
 </script>
+
 </html>

@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval and stop interval task</title>
+</head>
+<body style="text-align: center;">
+    <h1>garbage collection</h1>
+    <button style="margin: 20px;" class="start">start</button>
+    <button style="margin: 20px;"class="stop">stop</button>
+
+</body>
+<script>
+    // let b
+    // document.querySelector('.start').addEventListener("click",function () {
+    //     b=setInterval(()=>{
+            
+    //         console.log("welcome"+Date.now())
+    //     }, 2000);
+    // })
+    //  document.querySelector('.stop').addEventListener('click',function () {
+    //     clearInterval(b)
+    //  })
+// Consider the following example 
+
+// Declare an object 
+var object_1 = { 
+	object_2: { 
+		object_3: 7 
+	} 
+}; 
+
+// In this example, create two objects 
+// One object is referred by another 
+// as one of its properties. Currently, 
+// none can be garbage collected 
+
+// The "object_4" variable is the second 
+// thing that has a reference to the object 
+var object_4 = object_1; 
+
+
+// The object that was originally in 
+// "object_1" has a unique reference 
+// embodied by the "object_4" variable 
+object_1 = 1; 
+console.log("second",object_4);
+//Reference to "object_2" property of 
+// the object. This object now has 2 
+// references: 1 as a property, 
+// The other as the "object_5" variable. 
+var object_5 = object_4.object_2; 
+console.log(object_5);
+// The object that was in "object_1" has 
+// now zero references to it. It can be 
+// garbage-collected. However its "object_2" 
+// property is still referenced by the 
+// "object_5" variable, so it cannot be freed. 
+object_4 = "Geeks For Geeks"; 
+console.log(object_4);
+// Now the "object_2" property has no 
+// references to it and hence it can 
+// be garbage collected. 
+
+console.log("r",object_5);
+
+</script>
+</html> -->
