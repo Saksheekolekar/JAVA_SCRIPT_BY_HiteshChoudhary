@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop and start button</title>
+    <style>
+
+    body{
+        display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* min-height: 100vh;  */
+    }
+   button{
+    margin: 20px;
+   }
+    </style>
+</head>
+<body>
+    <button class="start">Start </button> 
+    <button class="stop">stop </button> 
+</body>
+<script>
+    //start stop button
+     let show;
+     const body=document.querySelector("body")
+    const start=document.querySelector(".start")
+    const stop=document.querySelector(".stop")
+
+    let red, green, blue,color,generate;
+
+    start.addEventListener('click',()=>{
+        generate=setInterval(()=>{
+            red=Math.floor(Math.random()*256);
+            green=Math.floor(Math.random()*256);
+            blue=Math.floor(Math.random()*256);
+            color=`rgb(${red},${green},${blue})`;
+            document.body.style.backgroundColor=color;
+        },1000)
+    })
+
+    stop.addEventListener('click',()=>{
+        clearInterval(generate);
+    })
+
+
+    
+    /*start.addEventListener("click",()=>{
+       show=setInterval(()=>{
+        console.log("sakshi "+Date.now()  );
+       },1000)
+    })
+
+    stop.addEventListener('click',()=>{
+        clearInterval(show)
+    }) */
+   
+
+</script>
+</html>
