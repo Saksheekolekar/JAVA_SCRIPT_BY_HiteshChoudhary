@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display:flexbox;
+        text-align: center;
+        margin: 10%;
+    }
+</style>
+<body>
+    <div class="profile">
+        <h2>followers count==</h2>
+     </div>
+</body>
+<script>
+    const profile=document.querySelector("div")
+    const xml=new XMLHttpRequest();
+    xml.open("get","https://api.github.com/users/Saksheekolekar")
+    xml.onreadystatechange=function(){
+        if(xml.readyState===4){
+            const data=JSON.parse(this.responseText)
+            console.log(typeof(data));
+            profile.innerHTML+=`<img src="${data.avatar_url}" alt="abc"></img>`;
+            document.querySelector("h2").innerText+=`${data.followers}`
+           
+        }
+    }
+    xml.send()
+</script>
+</html>

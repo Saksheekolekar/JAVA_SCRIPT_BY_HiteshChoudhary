@@ -125,4 +125,18 @@ button.addEventListener("click", function (e) {
 })
 
 ```
+5.its project which handle keyevent "keyup" shows  keyname keycode and code after releasing the pressed key.
+```javascript
+window.addEventListener('keyup',(e)=>{
+    document.querySelector('div').innerHTML=`
+    <table border=1>
+        <tr>
+            <th>key<th>keyCode<th>code
+        </tr>
+        <tr>
+            <td>${e.key==" "?"space":e.key}<td>${e.keyCode}<td>${e.code}
+        </tr>
+    </table>`
+})
+```
 
