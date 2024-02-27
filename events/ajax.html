@@ -3,33 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>github card</title>
 </head>
 <style>
     div{
-        display:flexbox;
+        justify-content: center;
         text-align: center;
-        margin: 10%;
+        /* margin: 10px; */
+        margin-right: 500px;
+        margin-left: 500px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 60px;
+        border:  3px solid rgba(8, 8, 8, 0.644);
+        background:linear-gradient(to bottom,rgb(248, 241, 241),rgb(140, 208, 245));
+        
+    }
+    img:hover{
+        transition: transform 0.3s ease-in-out;
     }
 </style>
 <body>
     <div class="profile">
-        <h2>followers count==</h2>
+        <h2>followers count =</h2>
      </div>
 </body>
 <script>
-    const profile=document.querySelector("div")
-    const xml=new XMLHttpRequest();
-    xml.open("get","https://api.github.com/users/Saksheekolekar")
-    xml.onreadystatechange=function(){
-        if(xml.readyState===4){
-            const data=JSON.parse(this.responseText)
-            console.log(typeof(data));
-            profile.innerHTML+=`<img src="${data.avatar_url}" alt="abc"></img>`;
-            document.querySelector("h2").innerText+=`${data.followers}`
-           
-        }
+   const xml=new XMLHttpRequest();
+   xml.open('get',"https://api.github.com/users/Saksheekolekar")
+   xml.onreadystatechange=function(){
+    if(xml.readyState===4 && xml.status===200 ){
+        const data=JSON.parse(this.response);
+        document.querySelector("div").innerHTML+=`<img src="${data.avatar_url}"></img>`
+        document.querySelector("h2").innerHTML+=`${data.followers}`
     }
-    xml.send()
+   }
+   xml.send()
 </script>
 </html>
