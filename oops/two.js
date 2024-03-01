@@ -1,5 +1,5 @@
 //prototypal behaviour of js
-//prototypal inheritance
+
 
 //js does not giveup ,it search till the parent node
 //object is the root of all
