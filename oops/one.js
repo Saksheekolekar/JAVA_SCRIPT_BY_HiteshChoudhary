@@ -22,7 +22,7 @@ function User(userName,userCount,isLoggedIn) {
 }
 /* const userOne=User("ram",23,true)
 const userTwo=User("sham",13,false) *///..without new it will rewrite the values in existing environment gkobal variable
-// const userOne=new User("ram",23,true)//User { userName: 'ram', userCount: 23, isLoggedIn: true }
+const userOne=new User("ram",23,true)//User { userName: 'ram', userCount: 23, isLoggedIn: true }
 // const userTwo=new User("sham",13,false)//User { userName: 'sham', userCount: 13, isLoggedIn: false }
 // console.log(userOne);
 // console.log(userTwo);
@@ -32,4 +32,4 @@ constructor function is called
 this keyword all the values are added in it 
 at the end this will given to us */
 console.log(User().greet());
-// console.log(user);
+console.log(userOne.constructor());//this returns whole object. so constructor points to this
