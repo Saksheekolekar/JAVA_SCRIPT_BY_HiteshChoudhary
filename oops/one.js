@@ -32,4 +32,6 @@ constructor function is called
 this keyword all the values are added in it 
 at the end this will given to us */
 console.log(User().greet());
+console.log(userOne.greet());//welcome
+console.log(this);//{}
 console.log(userOne.constructor());//this returns whole object. so constructor points to this

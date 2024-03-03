@@ -1,5 +1,5 @@
 //call stack 
-//ehen we call setusername method from createuername method.it will realease the value after execution 
+//wehen we call setusername method from createuername method.it will realease the value after execution 
 //so we cant get user name for our method ..so by using call we send it the this of our method to 
 //store its value before releasing its environment.
 function setUsername(username) {

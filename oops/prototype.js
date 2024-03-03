@@ -1,4 +1,4 @@
-//prototypal inheritance
+//prototypal inheritance(by default beack in property)
 let name="sakshi"
 console.log(name.length);//6
 

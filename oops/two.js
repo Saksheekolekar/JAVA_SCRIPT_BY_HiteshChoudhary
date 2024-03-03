@@ -15,22 +15,22 @@ console.log(multiply.prototype);//{} */
 
 function createUsername(userName,score) {
     this.userName=userName
-    this.score=score;
-    
+    this.score=score;  
 }
+
 
 //now i want to add new method to above one
 createUsername.prototype.increment=function(){
-    // score++//this cause problem for multiple uses it get confused which score shold increment
+    // score++//this cause problem for multiple uses it get confused which score should increment
    return this.score++//this will increment the score of current executing one
 }
 
-const abc=new createUsername("abc",34)
+const abc= createUsername("abc",34)//without new gives error because it needs to define that which object to create.
 
 // abc.increment()//Cannot read properties of undefined (reading 'increment') THIS ERROR DUE TO WE CANT ADD IT TO PROTOTYPE
 
-console.log(abc.increment());//34 after adding new to it
-console.log(createUsername.prototype);//{ increment: [Function (anonymous)] }
+// console.log(abc.increment());//34 after adding new to it
+console.log(abc.prototype);//{ increment: [Function (anonymous)] }
 
 /*  Here is the  what happenes behind  the scene of new keyword is used:
 
