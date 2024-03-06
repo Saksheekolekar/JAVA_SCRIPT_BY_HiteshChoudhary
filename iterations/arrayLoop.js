@@ -53,6 +53,7 @@ coding.forEach(function (item,index,originalarray){//using a function  for ech p
     console.log(item,index,originalarray);
 })
 
+
 //------------------------------------------------------------for each on [{},{},{}]------------------------
 
 const mycoding=[
