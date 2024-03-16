@@ -1,12 +1,13 @@
-let discuss about fetch
+# let discuss about fetch
 
  first of all fetch handles web api where it has its separate priority query with an highest priory
-which makes it execute before the  task queue operations 
+which makes it execute before the  task queue operations .
 
 
-now the come to the execution part of fetch
- 1) unaccesible data part containing data,onfullfilled[],onrejection[]
- 2) then method which returns a promisethat is handle by node or web browser which makes network request to given url.
+## now the come to the execution part of fetch
+ #### 1) unaccesible data part containing data,onfullfilled[],onrejection[].
+
+#### 2) then method which returns a promisethat is handle by node or web browser which makes network request to given url.
 
 
 

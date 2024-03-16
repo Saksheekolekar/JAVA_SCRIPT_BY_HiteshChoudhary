@@ -39,7 +39,7 @@ const arrobj=[
 
 // console.log(Object.keys(tinder)); //returns array of keys [ 'id', 'email', 'isloggedin' ]
 // console.log(Object.values(tinder));//returns array of values [ 485, 'abc@13456gmail.com', false ]
-// console.log(Object.entries(tinder))
+console.log("entries",Object.entries(tinder))
 /*[
     [ 'id', 485 ],
     [ 'email', 'abc@13456gmail.com' ],
@@ -58,5 +58,5 @@ instructor:"abc sir"
 //const {courcename}=course 
 //console.log(courcename); //js course
 
-const {instructor:i}=course
+const {instructor:i}=course//i referse to another name  in js
 console.log(i); //abc sir

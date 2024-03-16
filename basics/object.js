@@ -7,18 +7,18 @@
 
 const jsUser={
     name:"Sakshi",
-    [mysym]:"mykey1", //to define it must enclosed withn square bracket  [Symbol(key1)]: 'mykey1'
+    [mysym]:"my key1", //to define it must enclosed withn square bracket  [Symbol(key1)]: 'mykey1'
     age:67,
     location:"shrirampur",
     "em ail":"abc@123gmail.com",
     isloggedIn:true,
     lastloggindays:["mon","thus"]
 }
-
-console.log(jsUser["em ail"]);
-console.log(jsUser[mysym]);
+console.log(Symbol.keyFor(Symbol.for(" mykey1")));//for gives the symbol value of string where keyFor gives string for symbol value
+// console.log(jsUser["em ail"]);//abc@123gmail.com
+console.log(jsUser[ mysym]);//mykey1
 //we can print object element by following methods
-//console.log(jsUser.em ail); //here not requered
+// console.log(jsUser.em ail); //here dot requered
 // console.log(jsUser.["em ail"]); //must need to speify quote i.e. "email"  not requred dot
 // console.log(jsUser.[mysym]);//symbols  and key with spacing name must need this type to access
 
@@ -26,7 +26,7 @@ console.log(jsUser[mysym]);
 jsUser.age=18
 
 //freeze abject
-//Object.freeze(jsUser)
+// Object.freeze(jsUser)//not new values are added and dont override any value
 
 jsUser.age= 21 //this will not affect due to freez
 // console.log(jsUser);

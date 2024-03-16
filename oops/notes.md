@@ -1,19 +1,25 @@
-one.js:constructor function,this
+# OOPS CONCEPTS Code Overview
 
-two.js: new keyword and prototype used wing new
+This folder contains a collection of JavaScript files, each addressing specific concepts and features of the language. The code snippets are organized into folders based on their respective topics. Below is a brief overview of each file:
 
-prototype.js:prototypal inheritance
+```plaintext one.js:constructor function,this
 
-call.js:use of call syntax: fun.call(this,arg1)
+1. two.js: New keyword and prototype used with 'new'.
 
-Myclass.js: class in js and same functionality using function
+2. prototype.js: Prototypal inheritance.
 
-inheritance.js:inheritance in js using classes and also function.
+3. call.js: Use of the 'call' syntax, e.g., fun.call(this, arg1).
 
-staticprop: how to use static in js
+4. Myclass.js: Class in JavaScript and equivalent functionality using a function.
 
-bind.js: bind keyword which use for providing reference in html .eg button clicked.
+5. inheritance.js: Inheritance in JavaScript using classes and functions.
 
-math.js:getOwnPropertyDescriptor and defineProperty use in js using pi example.
+6. staticprop.js: How to use static in JavaScript.
 
-getset.js:this contains the handling of private properties with getter and setter method in js.
+7. bind.js: Bind keyword usage, often used for providing references in HTML, e.g., button clicked.
+
+8. math.js: `getOwnPropertyDescriptor` and `defineProperty` usage in JavaScript using pi as an example.
+
+9. getset.js: Handling of private properties with getter and setter methods in JavaScript.
+
+```
